@@ -31,13 +31,16 @@
 <body>
 	<div class="container-fluid">
 		<section class="row">
+
 		<!--=====================================
 		COLUMNA CONTENIDO
 		======================================-->
-
-
-
+		<?php
+			$modulos = new Enlaces();
+			$modulos -> enlacesController();
+		?>
 		<!--====  Fin de COLUMNA CONTENIDO  ====-->
+
 		</section>
 	</div>
 

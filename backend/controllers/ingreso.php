@@ -11,7 +11,7 @@ class Ingreso {
 			header("location:index.php?action=inicio");
 		}
 		else {
-			echo "Error al ingresar";
+			echo '<div class="alert alert-danger">Error al ingresar</div>';
 		}
 	}
 }

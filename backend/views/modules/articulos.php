@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!$_SESSION["validar"]) {
+	header("location:ingreso");
+	exit();
+}
+
+include "views/modules/botonera.php";
+include "views/modules/cabezote.php";
+?>
+
 <!--=====================================
 ARTÍCULOS ADMINISTRABLE
 ======================================-->
@@ -12,7 +24,7 @@ ARTÍCULOS ADMINISTRABLE
 		<p>Tamaño recomendado: 800px * 400px, peso máximo 2MB</p>
 
 		<div id="arrastreImagenArticulo">
-			<div id="imagenArticulo"><img src="images/articulos/landscape01.jpg" class="img-thumbnail"></div>
+			<div id="imagenArticulo"><img src="views/images/articulos/landscape01.jpg" class="img-thumbnail"></div>
 		</div>
 
 		<textarea name="" id="" cols="30" rows="10" placeholder="Contenido del Articulo" class="form-control"></textarea>
@@ -28,7 +40,7 @@ ARTÍCULOS ADMINISTRABLE
 			<i class="fa fa-times btn btn-danger"></i>
 			<i class="fa fa-pencil btn btn-primary"></i>
 			</span>
-			<img src="images/articulos/landscape02.jpg" class="img-thumbnail">
+			<img src="views/images/articulos/landscape02.jpg" class="img-thumbnail">
 			<h1>Lorem Ipsum</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			<a href="#articulo1" data-toggle="modal">
@@ -41,7 +53,7 @@ ARTÍCULOS ADMINISTRABLE
 			<span>
 			<button class="btn btn-primary pull-right">Guardar</button>
 			</span>
-			<div id="editarImagen"><span class="fa fa-times"></span><img src="images/articulos/landscape03.jpg" class="img-thumbnail"></div>
+			<div id="editarImagen"><span class="fa fa-times"></span><img src="views/images/articulos/landscape03.jpg" class="img-thumbnail"></div>
 			<input type="text" value="Lorem Ipsum">
 			<textarea cols="30" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
 			<textarea name="" id="editarContenido" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -66,7 +78,7 @@ ARTÍCULO MODAL
 		</div>
 
 		<div class="modal-body" style="border:1px solid #eee">
-			<img src="images/articulos/landscape02.jpg" width="100%" style="margin-bottom:20px">
+			<img src="views/images/articulos/landscape02.jpg" width="100%" style="margin-bottom:20px">
 			<p class="parrafoContenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 		</div>
 

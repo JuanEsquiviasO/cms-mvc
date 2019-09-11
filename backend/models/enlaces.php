@@ -10,7 +10,8 @@ class EnlacesModels {
 				$enlaces == "videos" ||
 				$enlaces == "suscriptores" ||
 				$enlaces == "mensajes" ||
-				$enlaces == "perfil")	{
+				$enlaces == "perfil" ||
+				$enlaces == "salir") {
 
 					$module = "views/modules/".$enlaces.".php";
 		}

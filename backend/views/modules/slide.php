@@ -1,11 +1,9 @@
 <?php
 session_start();
-
 if (!$_SESSION["validar"]) {
 	header("location:ingreso");
 	exit();
 }
-
 include "views/modules/botonera.php";
 include "views/modules/cabezote.php";
 ?>
@@ -22,7 +20,7 @@ SLIDE ADMINISTRABLE
 	</p>
 
 	<ul id="columnasSlide">
-		<li class="bloqueSlide">
+		<!-- <li class="bloqueSlide">
 			<span class="fa fa-times"></span>
 			<img src="views/images/slide/slide01.jpg" class="handleImg">
 		</li>
@@ -50,7 +48,7 @@ SLIDE ADMINISTRABLE
 		<li class="bloqueSlide">
 			<span class="fa fa-times"></span>
 			<img src="views/images/slide/slide02.jpg" class="handleImg">
-		</li>
+		</li> -->
 	</ul>
 
 	<button id="ordenarSlide" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar Slides</button>
@@ -62,7 +60,7 @@ SLIDE ADMINISTRABLE
 
 	<hr>
 	<ul id="ordenarTextSlide">
-		<li>
+		<!-- <li>
 			<span class="fa fa-pencil" style="background:blue"></span>
 			<img src="views/images/slide/slide01.jpg" style="float:left; margin-bottom:10px" width="80%">
 			<h1>Lorem Ipsum</h1>
@@ -102,12 +100,12 @@ SLIDE ADMINISTRABLE
 			<input type="text" class="form-control" placeholder="Título">
 			<textarea row="5" class="form-control" placeholder="Descripción"></textarea>
 			<button class="btn btn-info pull-right" style="margin:10px">Guardar</button>
-		</li>
+		</li> -->
 	</ul>
 </div>
 
 <!--===============================================-->
-<div id="slide" class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
+<!-- <div id="slide" class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
 	<hr>
 	<ul>
 		<li>
@@ -152,5 +150,5 @@ SLIDE ADMINISTRABLE
 
 	<div id="slideIzq"><span class="fa fa-chevron-left"></span></div>
 	<div id="slideDer"><span class="fa fa-chevron-right"></span></div>
-</div>
+</div> -->
 <!--====  Fin de SLIDE ADMINISTRABLE  ====-->

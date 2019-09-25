@@ -57,16 +57,16 @@ form input.formIngreso{
 
 
 /*=============================================
-CABEZOTE           
+CABEZOTE
 =============================================*/
 
-/*Logotipo*/ 
+/*Logotipo*/
 
 #logo{
 	padding:20px;
 }
 
-/*Botonera*/ 
+/*Botonera*/
 
 nav#botonera{
 	width: 100%;
@@ -84,7 +84,7 @@ nav#botonera ul li a span{
 	background:white;
 	z-index:1;
 	box-shadow:0px 1px 10px #333;
-	
+
 }
 
 #cabezote #admin{
@@ -95,7 +95,7 @@ nav#botonera ul li a span{
 /*=====  Fin de CABEZOTE  ======*/
 
 /*=============================================
-INICIO 
+INICIO
 =============================================*/
 
 .botonesInicio div{
@@ -121,13 +121,19 @@ INICIO
 /*=====  Fin de INICIO  ======*/
 
 /*=============================================
-SLIDE            
+SLIDE
 =============================================*/
 
+#status {
+	position: relative;
+	display: block;
+	margin: auto;
+}
+
 #slide{
-	position: relative;	
-    margin: auto;
-    padding:20px;
+	position: relative;
+	margin: auto;
+	padding:20px;
 	margin-bottom:-50px;
 	overflow:hidden;
 	background:white;
@@ -266,7 +272,7 @@ SLIDE
 /*=====  Fin de SLIDE  ======*/
 
 /*=============================================
-ARTICULOS          
+ARTICULOS
 =============================================*/
 
 #seccionArticulos{
@@ -339,7 +345,7 @@ ARTICULOS
 	width:100%;
 	height:40px;
 	background: #eee;
-	
+
 }
 
 #editarArticulo li span i{
@@ -358,7 +364,7 @@ ARTICULOS
 /*=====  Fin de ARTICULOS ======*/
 
 /*=============================================
-GALERÍA        
+GALERÍA
 =============================================*/
 
 #galeria{
@@ -402,7 +408,7 @@ GALERÍA
 /*=====  Fin de GALERÍA ======*/
 
 /*=============================================
-VIDEOS 
+VIDEOS
 =============================================*/
 
 #videos{
@@ -452,7 +458,7 @@ VIDEOS
 /*=====  Fin de VIDEOS ======*/
 
 /*=============================================
-SUSCRIPTORES 
+SUSCRIPTORES
 =============================================*/
 
 #suscriptores{
@@ -462,7 +468,7 @@ SUSCRIPTORES
 /*=====  Fin de SUSCRIPTORES ======*/
 
 /*=============================================
-MENSAJES        
+MENSAJES
 =============================================*/
 
 #bandejaMensajes{
@@ -484,7 +490,7 @@ MENSAJES
 /*=====  Fin de MENSAJES ======*/
 
 /*=============================================
-PERFIL        
+PERFIL
 =============================================*/
 
 #editarPerfil{
@@ -505,10 +511,10 @@ PERFIL
 /*=====  Fin de PERFIL ======*/
 
 /*=============================================
-ESCRITORIO GRANDE                    
+ESCRITORIO GRANDE
 =============================================*/
 @media (min-width:1200px){
-	
+
 	/*fecha y hora*/
 
 	#time{
@@ -537,7 +543,7 @@ ESCRITORIO GRANDE
 		position: relative;
 		font-size:16px;
 		color:white;
-		cursor: pointer;	
+		cursor: pointer;
 	}
 
 	#cabezote ul li span{
@@ -734,11 +740,11 @@ ESCRITORIO GRANDE
 }
 
 /*=====  Fin de ESCRITORIO GRANDE  ======*/
-	
+
 /*=============================================
-ESCRITORIO MEDIANO                   
+ESCRITORIO MEDIANO
 =============================================*/
-	
+
 @media (max-width:1199px) and (min-width:992px){
 
 	/*fecha y hora*/
@@ -769,7 +775,7 @@ ESCRITORIO MEDIANO
 		position: relative;
 		font-size:16px;
 		color:white;
-		cursor: pointer;	
+		cursor: pointer;
 	}
 
 	#cabezote ul li span{
@@ -828,7 +834,7 @@ ESCRITORIO MEDIANO
 	}
 
 	/*Inicio*/
-	
+
 	.botonesInicio{
 		float:left;
 		margin:20px 10px;
@@ -966,11 +972,11 @@ ESCRITORIO MEDIANO
 }
 
 /*=====  Fin de ESCRITORIO PEQUEÑO  ======*/
-	
+
 /*********************************************
 Tablets
 **********************************************/
-	
+
 @media (max-width:991px) and (min-width:768px){
 
 	/*fecha y hora*/
@@ -985,7 +991,7 @@ Tablets
 	#col1{
 		background: black;
 		height:auto;
-	} 
+	}
 
 	/*Cabezote*/
 
@@ -1001,7 +1007,7 @@ Tablets
 		position: relative;
 		font-size:16px;
 		color:white;
-		cursor: pointer;	
+		cursor: pointer;
 	}
 
 	#cabezote ul li span{
@@ -1061,7 +1067,7 @@ Tablets
 	}
 
 	/*Inicio*/
-	
+
 	.botonesInicio{
 		float:left;
 		margin:20px 10px;
@@ -1197,11 +1203,11 @@ Tablets
 }
 
 /*=====  Fin de TABLET  ======*/
-	
+
 /*********************************************
 Phones
 **********************************************/
-	
+
 @media (max-width:767px){
 
 	/*Fecha y hora*/
@@ -1225,7 +1231,7 @@ Phones
 		position: relative;
 		font-size:14px;
 		color:white;
-		cursor: pointer;	
+		cursor: pointer;
 	}
 
 	#cabezote ul li span{
@@ -1285,7 +1291,7 @@ Phones
 	}
 
 	/*Inicio*/
-	
+
 	.botonesInicio{
 		float:left;
 		margin:20px 10px;
@@ -1319,7 +1325,7 @@ Phones
 	}
 
 	#imgSlide ul li img{
-		width:100%;		
+		width:100%;
 	}
 
 	#slide div#slideIzq span{

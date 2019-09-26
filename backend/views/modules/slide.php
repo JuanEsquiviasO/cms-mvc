@@ -21,6 +21,11 @@ SLIDE ADMINISTRABLE
 
 	<ul id="columnasSlide">
 
+	<?php
+	$slide = new GestorSlide();
+	$slide -> mostrarImagenVistaController();
+	?>
+
 	</ul>
 
 	<button id="ordenarSlide" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar Slides</button>
@@ -32,6 +37,11 @@ SLIDE ADMINISTRABLE
 
 	<hr>
 	<ul id="ordenarTextSlide">
+
+	<?php
+	$slide = new GestorSlide();
+	$slide -> editorSlideController();
+	?>
 		<!-- <li>
 			<span class="fa fa-pencil" style="background:blue"></span>
 			<img src="views/images/slide/slide01.jpg" style="float:left; margin-bottom:10px" width="80%">

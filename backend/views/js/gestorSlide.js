@@ -81,6 +81,8 @@ $("#columnasSlide").on("drop", function (e) {
 					$("#columnasSlide").css({ "height": "auto" });
 
 					$("#columnasSlide").append('<li class="bloqueSlide"><span class="fa fa-times"></span><img src="'+respuesta["ruta"].slice(6)+'" class="handleImg"></li>');
+
+					$("#ordenarTextSlide").append('<li><span class= "fa fa-pencil" style = "background:blue" ></span ><img src="' + respuesta["ruta"].slice(6) +'" style="float:left; margin-bottom:10px" width="80%"><h1>'+respuesta["titulo"]+'</h1><p>'+respuesta["descripcion"]+'</p></li>');
 				}
 			}
 		});

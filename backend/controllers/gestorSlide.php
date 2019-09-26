@@ -1,9 +1,14 @@
 <?php
 class GestorSlide {
 
-	public function mostrarImagenController($datos) {
+	#SHOW IMAGE SLIDE AJAX
+				#----------------------------------------------------
+				public function mostrarImagenController($datos) {
 
-		list($ancho, $alto) = getimagesize($datos["imagenTemporal"]);
+		#getimagesize - Get the size og a image
+
+		#LIST() Not really a function, is a Constructor of language, usually use for asign a list of variaables in one operation
+								list($ancho, $alto) = getimagesize($datos["imagenTemporal"]);
 
 		if ($ancho < 1600 || $alto < 600) {
 			echo 0;
@@ -12,7 +17,9 @@ class GestorSlide {
 			$aleatorio = mt_rand(100, 999);
 
 			$ruta = "../../views/images/slide/slide".$aleatorio.".jpg";
-			$origen = imagecreatefromjpeg($datos["imagenTemporal"]);
+
+			#imagecreatefromjpeg - Create a new image from a file or the URL
+												$origen = imagecreatefromjpeg($datos["imagenTemporal"]);
 
 			imagejpeg($origen, $ruta);
 
@@ -23,6 +30,32 @@ class GestorSlide {
 			$enviarDatos = array("ruta"=>$respuesta["ruta"]);
 
 			echo json_encode($enviarDatos);
+		}
+	}
+
+	#SHOW IMAGE SLIDE AJAX
+				#----------------------------------------------------
+				public function mostrarImagenVistaController() {
+		$respuesta = GestorSlideModel::mostrarImagenVistaModel("slide");
+
+		foreach($respuesta as $row => $item) {
+			echo '<li class="bloqueSlide"><span class="fa fa-times"></span><img src="'.substr($item["ruta"], 6).'" class="handleImg"></li>';
+		}
+	}
+
+
+	#SHOW IMAGE IN THE EDITOR
+				#----------------------------------------------------
+				public function editorSlideController() {
+		$respuesta = GestorSlideModel::mostrarImagenVistaModel("slide");
+
+		foreach($respuesta as $row => $item) {
+			echo '<li>
+							<span class="fa fa-pencil" style="background:blue"></span>
+							<img src="'.substr($item["ruta"], 6).'" style="float:left; margin-bottom:10px" width="80%">
+							<h1>'.$item["titulo"].'</h1>
+							<p>'.$item["descripcion"].'</p>
+						</li>';
 		}
 	}
 }

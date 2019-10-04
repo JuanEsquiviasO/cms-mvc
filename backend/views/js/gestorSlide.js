@@ -88,3 +88,33 @@ $("#columnasSlide").on("drop", function (e) {
 		});
 	}
 });
+
+/*--=====================================
+	 DELETE SLIDE ITEM
+========================================*/
+$(".eliminarSlide").click(function () {
+
+	idSlide = $(this).parent().attr("id");
+	rutaSlide = $(this).attr("ruta");
+
+	$(this).parent().remove();
+	$("#item"+idSlide).remove();
+
+	var borrarItem = new FormData();
+
+	borrarItem.append("idSlide", idSlide);
+	borrarItem.append("rutaSlide", rutaSlide);
+
+	$.ajax({
+		url: "views/ajax/gestorSlide.php",
+		method: "POST",
+		data: borrarItem,
+		cache: false,
+		contentType: false,
+		processData: false,
+		success: function (respuesta) {
+			console.log('respuesta', respuesta);
+		}
+
+	});
+});

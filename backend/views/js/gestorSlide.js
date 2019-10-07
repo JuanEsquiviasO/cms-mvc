@@ -108,6 +108,10 @@ $("#columnasSlide").on("drop", function (e) {
 ========================================*/
 $(".eliminarSlide").click(function () {
 
+	if ($(".eliminarSlide").length == 1) {
+		$("#columnasSlide").css({"height": "100px"});
+	}
+
 	idSlide = $(this).parent().attr("id");
 	rutaSlide = $(this).attr("ruta");
 
@@ -129,6 +133,43 @@ $(".eliminarSlide").click(function () {
 		success: function (respuesta) {
 			console.log('respuesta', respuesta);
 		}
+	});
+});
 
+/*--=====================================
+	 EDIT SLIDE ITEM
+========================================*/
+$(".editarSlide").click(function () {
+	idSlide = $(this).parent().attr("id");
+	rutaImagen = $(this).parent().children("img").attr("src");
+	rutaTitulo = $(this).parent().children("h1").html();
+	rutaDescripcion = $(this).parent().children("p").html();
+
+
+	$(this).parent().html('<img src="'+rutaImagen+'" class= "img-thumbnail" ><input type="text" class="form-control" id="enviarTitulo" placeholder="Título" value="'+rutaTitulo+'" ><textarea row="5" id="enviarDescripcion" class="form-control" placeholder="Descripción">'+rutaDescripcion+'</textarea><button class="btn btn-info pull-right id="guardar'+idSlide+'" style="margin:10px">Guardar</button>');
+
+	$("#guardar"+idSlide).click(function () {
+		enviarId = idSlide.slice(4);
+
+		enviarTitulo = $("#enviarTitulo").val();
+		enviarDescripcion = $("#enviarDescripcion").val();
+
+		var actualizarSlide = new FormData();
+		actualizarSlide.append("enviarId", enviarId);
+		actualizarSlide.append("enviarTitulo", enviarTitulo);
+		actualizarSlide.append("enviarDescripcion", enviarDescripcion);
+
+		$.ajax({
+			url: "views/ajax/gestorSlide.php",
+			method: "POST",
+			data: actualizarSlide,
+			cache: false,
+			contentType: false,
+			processData: false,
+			dataType: "json",
+			success: function () {
+				console.log('respuesta', respuesta);
+			}
+		});
 	});
 });
